@@ -10,7 +10,7 @@
   <!-- bootstrap css -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!-- css -->
-  <link rel="stylesheet" href="../../../css/style.css">
+  <link rel="stylesheet" href="../../css/style.css">
   <!-- fontfamily -->
   <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300" rel="stylesheet">
   <!-- jQuery -->
@@ -34,7 +34,7 @@
         </div>
         <div class="input-area">
           <label for="email">メールアドレス</label>
-          <input type="text" name="emmail" placeholder="重複不可">
+          <input type="text" name="email" placeholder="重複不可">
         </div>
         <div class="input-area">
           <label for="password">パスワード</label>
