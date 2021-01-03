@@ -1,12 +1,3 @@
-<?php
-  session_start();
-  unset($_SESSION["login_user"]);
-  if( isset($_SESSION['flash']) ){
-    $flash_message = $_SESSION['flash']['message'];
-    $flash_type = $_SESSION['flash']['type'];
-  }
-  unset($_SESSION['flash']);
-?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -25,35 +16,34 @@
   <script src="https://kit.fontawesome.com/b24292ab52.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<header>
-  <div class="header-left">
-    <h1>IN/OUT</h1>
-    <p>~IT quiz app~</p>
-  </div>
-</header>
+  <header>
+    <div class="header-left">
+      <h1>IN/OUT</h1>
+      <p>~IT quiz app~</p>
+    </div>
+  </header>
   <div class="main">
     <div class="container text-center">
-      <?php
-        if (isset($flash_message)) {
-          echo '<p class="flash '.$flash_type.'">'.$flash_message.'</p>';
-        }
-      ?>
       <div class="toppage-content">
         <h1 id="toppage-heading">IT => IN/OUT</h1>
         <p>〜IT用語専門学習ツール〜</p>
       </div>
-      <form class="form-wrapper" action="loginController.php" method="post">
-        <h2>ログイン</h2>
+      <form class="form-wrapper" action="new_user_create.php" method="post">
+        <h2>ユーザ新規登録</h2>
+        <div class="input-area">
+          <label for="code">ユーザーネーム</label>
+          <input type="text" name="name">
+        </div>
         <div class="input-area">
           <label for="email">メールアドレス</label>
-          <input type="text" name="email">
+          <input type="text" name="email" placeholder="重複不可">
         </div>
         <div class="input-area">
           <label for="password">パスワード</label>
           <input type="text" name="password">
         </div>
-        <button type="submit">ログイン</button>
-        <a href="new_user.php" style="color:rgba(110, 0, 225, 0.7)">新規会員登録</a>
+        <input type="hidden" name="authority" value="0">
+        <button type="submit">新規登録</button>
       </form>
     </div>
   </div>
