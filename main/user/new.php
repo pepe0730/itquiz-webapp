@@ -1,4 +1,5 @@
 <?php
+  include("../../filter/loginCheckFilter.php");
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +27,7 @@
         <h1 id="toppage-heading">IT => IN/OUT</h1>
         <p>〜IT用語専門学習ツール〜</p>
       </div>
-      <form class="create-user" action="create.php" method="post">
+      <form class="form-wrapper" action="create.php" method="post">
         <h2>会員新規登録</h2>
         <div class="input-area">
           <label for="code">ユーザーネーム</label>
