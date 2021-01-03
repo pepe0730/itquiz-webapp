@@ -1,11 +1,7 @@
 <?php
   session_start();
   unset($_SESSION["login_user"]);
-  if( isset($_SESSION['flash']) ){
-    $flash_message = $_SESSION['flash']['message'];
-    $flash_type = $_SESSION['flash']['type'];
-  }
-  unset($_SESSION['flash']);
+  include("../filter/flashCheckFilter.php");
 ?>
 <!DOCTYPE html>
 <html lang="ja">

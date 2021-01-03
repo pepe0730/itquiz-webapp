@@ -5,11 +5,9 @@
   $authority = $_POST["authority"];
   include("../../connect/connect.php");
   $sql = "insert into user (name,email,password,authority) value ('".$name."','".$email."','".$password."',".$authority.")";
-  var_dump($sql);
-  
   $result = mysqli_query($db,$sql);
   mysqli_close($db);
-
+  
   if ($result) {
     header('Location: ../index.php');
     exit();
