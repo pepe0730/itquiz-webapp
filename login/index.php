@@ -1,5 +1,6 @@
 <?php
-  include("../filter/loginCheckFilter.php");
+  session_start();
+  unset($_SESSION["login_user"]);
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -15,32 +16,35 @@
   <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300" rel="stylesheet">
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script src="../js/modal.js"></script>
   <!-- font awesome -->
   <script src="https://kit.fontawesome.com/b24292ab52.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <?php include("../layout/header.php"); ?>
+<header>
+  <div class="header-left">
+    <h1>IN/OUT</h1>
+    <p>~IT quiz app~</p>
+  </div>
+</header>
   <div class="main">
     <div class="container text-center">
       <div class="toppage-content">
         <h1 id="toppage-heading">IT => IN/OUT</h1>
         <p>〜IT用語専門学習ツール〜</p>
       </div>
-      <div class="btn-wrapper">
-        <ul>
-          <li><a id="modal-btn-1" href="#">IT英単語</a></li>
-          <li><a id="modal-btn-2" href="#">IT用語</a></li>
-          <li><a id="modal-btn-3" href="#">構文・関数</a></li>
-          <li><a href="/quiz/new.php">問題を作成する</a></li>
-        </ul>
-      </div>
+      <form class="form-wrapper" action="loginController.php" method="post">
+        <h2>ログイン</h2>
+        <div class="input-area">
+          <label for="email">メールアドレス</label>
+          <input type="text" name="email">
+        </div>
+        <div class="input-area">
+          <label for="password">パスワード</label>
+          <input type="text" name="password">
+        </div>
+        <button type="submit">ログイン</button>
+      </form>
     </div>
-    <?php 
-        include("../layout/modal-1.php");
-        include("../layout/modal-2.php");
-        include("../layout/modal-3.php");
-    ?>
   </div>
   <?php include("../layout/footer.php"); ?>
 </body>
