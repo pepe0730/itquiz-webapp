@@ -8,10 +8,15 @@
 
   mysqli_close($db);
   if (!$user) {
+    session_start();
+    $_SESSION['flash']['message'] = "ログインに失敗しました";
+    $_SESSION['flash']['type'] = "flash_faile";
     header('Location: index.php');
   } else {
     session_start();
     $_SESSION["login_user"] = $user;
+    $_SESSION['flash']['message'] = "ログインに成功しました";
+    $_SESSION['flash']['type'] = "flash_success";
     header('Location: ../main/index.php');
   }
 ?>

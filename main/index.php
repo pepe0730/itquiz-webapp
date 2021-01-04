@@ -1,5 +1,6 @@
 <?php
   include("../filter/loginCheckFilter.php");
+  include("../filter/flashCheckFilter.php");
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -23,6 +24,11 @@
   <?php include("../layout/header.php"); ?>
   <div class="main">
     <div class="container text-center">
+    <?php
+        if (isset($flash_message)) {
+          echo '<p class="flash '.$flash_type.'">'.$flash_message.'</p>';
+        }
+      ?>
       <div class="toppage-content">
         <h1 id="toppage-heading">IT => IN/OUT</h1>
         <p>〜IT用語専門学習ツール〜</p>
