@@ -1,5 +1,7 @@
 <?php
   include("../../filter/loginCheckFilter.php");
+  include("../../filter/flashCheckFilter.php");
+  include("../../filter/validationCheckFilter.php")
 ?>
 
 <!DOCTYPE html>
@@ -23,6 +25,18 @@
   <?php include("../../layout/header.php"); ?>
   <div class="main">
     <div class="container text-center">
+      <?php
+        if (isset($flash_message)) {
+          echo '<div class="flash '.$flash_type.'">';
+          echo '<p class="mb-2">'.$flash_message.'</p>';
+          if(isset($validation)) {
+            for($i = 0; $i < count($validation); $i++) {
+              echo '<p class="mb-2">'.$validation[$i].'</p>';
+            }
+          }
+          echo '</div>';
+        }
+      ?>
       <div class="toppage-content">
         <h1 id="toppage-heading">IT => IN/OUT</h1>
         <p>〜IT用語専門学習ツール〜</p>
@@ -34,24 +48,42 @@
           <textarea name="question" cols="30" rows="10"></textarea>
         </div>
         <div class="input-area">
-          <label for="choices-1">選択肢1</label>
-          <input type="text" name="choices-1">
+          <label for="choices_1">選択肢1</label>
+          <input type="text" name="choices_1">
         </div>
         <div class="input-area">
-          <label for="choices-2">選択肢2</label>
-          <input type="text" name="choices-2">
+          <label for="choices_2">選択肢2</label>
+          <input type="text" name="choices_2">
         </div>
         <div class="input-area">
-          <label for="choices-3">選択肢3</label>
-          <input type="text" name="choices-3">
+          <label for="choices_3">選択肢3</label>
+          <input type="text" name="choices_3">
         </div>
         <div class="input-area">
-          <label for="choices-4">選択肢4</label>
-          <input type="text" name="choices-4">
+          <label for="choices_4">選択肢4</label>
+          <input type="text" name="choices_4">
         </div>
         <div class="input-area">
-          <label for="answer">答え</label>
-          <input type="text" name="answer" placeholder="答えの選択肢をここにコピペ">
+          <label for="correct">答え</label>
+          <input type="text" name="correct" placeholder="答えの選択肢をここにコピペ">
+        </div>
+        <div class="input-area">
+          <label for="genre">ジャンル</label>
+          <select name="genre">
+            <option value="english">英単語</option>
+            <option value="word">IT用語</option>
+            <option value="syntax">書式・文法・構文</option>
+          </select>
+        </div>
+        <div class="input-area">
+          <label for="tag">タグ</label>
+          <select name="tag">
+            <option value="IT基礎">IT基礎</option>
+            <option value="ネットワーク">ネットワーク</option>
+            <option value="Java">Java</option>
+            <option value="PHP">PHP</option>
+            <option value="SQL">SQL</option>
+          </select>
         </div>
         <?php
           if($login_user['authority'] == 1) {
@@ -68,6 +100,7 @@
             echo '<input type="hidden" name="disclosure_flag" value="0">';
           }
         ?>
+        <input type="hidden" name="user_id" value="<?php echo $login_user['id'] ?>">
         <button type="submit">問題を作成</button>
       </form>
     </div>
