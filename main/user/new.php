@@ -1,5 +1,6 @@
 <?php
   include("../../filter/loginCheckFilter.php");
+  unset($_SESSION['quiz_list'], $_SESSION['quiz_index'], $_SESSION['now_quiz'], $_SESSION['correct_count'], $_SESSION['quiz_length']);
 ?>
 
 <!DOCTYPE html>

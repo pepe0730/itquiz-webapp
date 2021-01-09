@@ -1,6 +1,6 @@
 <header>
   <div class="header-left">
-    <h1>IN/OUT</h1>
+    <h1><a href="http://localhost/inout_webapp/main/">IN/OUT</a></h1>
     <p>~IT quiz app~</p>
   </div>
   <ul>

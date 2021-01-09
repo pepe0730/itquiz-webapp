@@ -247,3 +247,48 @@ button {
   margin: 40px auto;
 }
 
+
+/* quiz play */
+.question_area {
+  background-color: white;
+  border:#838E95;
+  border-radius: 4px;
+  box-shadow: 0 0 2rem 0 rgba(53, 64, 82, .1);
+  padding: 40px;
+}
+.button-wrapper {
+  margin: 30px auto 70px auto;
+}
+
+/* quiz play */
+.result-wrapper {
+  background-color: white;
+  border:#838E95;
+  border-radius: 4px;
+  box-shadow: 0 0 2rem 0 rgba(53, 64, 82, .1);
+  padding: 100px;
+  margin: 80px auto;
+  width: 80%;
+}
+
+.result-wrapper h4 {
+  font-size: 30px;
+}
+
+.result-wrapper p {
+  font-size: 20px;
+}
+
+.result-wrapper a {
+  background-color: rgba(0, 204, 106, .8);
+  color: white;
+  border-radius: 4px;
+  display: block;
+  width: 200px;
+  height: 60px;
+  margin: 0 auto;
+  line-height: 60px;
+  box-shadow: 5px 4px 2px #ededed;
+  font-size: 18px;
+  transition: all 0.4s;
+}

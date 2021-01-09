@@ -1,7 +1,7 @@
 <?php
   include("../../filter/loginCheckFilter.php");
   include("../../filter/flashCheckFilter.php");
-  include("../../filter/validationCheckFilter.php")
+  include("../../filter/validationCheckFilter.php");
 ?>
 
 <!DOCTYPE html>

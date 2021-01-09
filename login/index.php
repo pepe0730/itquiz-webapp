@@ -1,6 +1,9 @@
 <?php
   session_start();
   unset($_SESSION["login_user"]);
+  unset($_SESSION['quiz_list']);
+  unset($_SESSION['quiz_index']);
+  unset($_SESSION['now_quiz']); 
   include("../filter/flashCheckFilter.php");
 ?>
 <!DOCTYPE html>
