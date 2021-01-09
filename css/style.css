@@ -39,9 +39,6 @@ ul {
   color:rgba(222, 38, 38, 0.7);
 }
 
-
-
-
 /*header*/
 header {
   height: 80px;
@@ -74,8 +71,6 @@ header ul {
 header ul li {
   margin-left: 20px;
 }
-
-
 
 /* main => top */
 .toppage-content {
@@ -130,11 +125,11 @@ header ul li {
   box-shadow: 7px 5px 2px 2px #ededed;
 }
 
-.btn-wrapper ul li:last-child a {
+.btn-wrapper ul li:last-child a, .btn-wrapper ul li:nth-child(4) a {
   background-color: rgba(0, 204, 106, .8);
 }
 
-.btn-wrapper ul li:last-child a:hover {
+.btn-wrapper ul li:last-child a:hover ,.btn-wrapper ul li:nth-child(4) a:hover{
   background-color: rgba(0, 204, 106, 1);
 }
 
@@ -227,7 +222,6 @@ button {
 }
 
 /* create user */
-
 .form-wrapper {
   background-color: #fff;
   border-radius: .375rem;
@@ -247,6 +241,15 @@ button {
   margin: 40px auto;
 }
 
+/* quiz-show */
+.show-wrapper {
+  background-color: white;
+  border:#838E95;
+  border-radius: 4px;
+  box-shadow: 0 0 2rem 0 rgba(53, 64, 82, .1);
+  padding: 100px;
+  margin-bottom: 50px;
+}
 
 /* quiz play */
 .question_area {

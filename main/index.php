@@ -40,6 +40,7 @@
           <li><a id="modal-btn-2" href="#">IT用語</a></li>
           <li><a id="modal-btn-3" href="#">構文・関数</a></li>
           <li><a href="quiz/new.php">問題を作成する</a></li>
+          <li><a href="quiz/show.php">問題を編集する</a></li>
         </ul>
       </div>
     </div>
