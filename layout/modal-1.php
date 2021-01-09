@@ -2,10 +2,11 @@
     <div id="modal" class="text-center">
       <span><i class="fas fa-times-circle" id="modal-close-one"></i></span>
       <h2>フィルター</h2>
-      <form action="quiz.php" method="post">
+      <form action="play/controller.php" method="post">
         <div class="select-area">
           <label for="tag">タグを選ぶ</label>
           <select name="tag" id="tag">
+          <option value="IT基礎">IT基礎</option>
             <option value="ネットワーク">ネットワーク</option>
             <option value="フロントエンド">フロントエンド</option>
             <option value="PHP">PHP</option>
@@ -23,13 +24,12 @@
         <div class="select-area">
           <label for="flag">問題の種類</label>
           <select name="flag" id="flag">
-            <option value="0">共通問題のみ</option>
-            <option value="1">自作問題のみ</option>
-            <option value="1">全て含む</option>
+            <option value="1">共通問題のみ</option>
+            <option value="0">自作問題のみ</option>
+            <option value="2">全て含む</option>
           </select>
         </div>
-        <input type="hidden" name="type" value="englishword">
-        <inpit type="hidden" name="id" value="<?php $login_person_id ?>">
+        <input type="hidden" name="genre" value="english">
         <button type="submit">スタート</button>
       </form>
     </div>
