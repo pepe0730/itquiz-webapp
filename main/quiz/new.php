@@ -17,9 +17,33 @@
   <!-- fontfamily -->
   <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300" rel="stylesheet">
   <!-- jQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <!-- font awesome -->
   <script src="https://kit.fontawesome.com/b24292ab52.js" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    
+    const tagList = {
+    "english": ["ネットワーク", "IT基礎", "プログラミング言語"],
+    "word": ["ネットワーク", "IT基礎", "フロントエンド"],
+    "syntax": ["HTML","SQL", "Java", "PHP"]
+  };
+  function createTag(selectGenre) {
+    let tags = document.getElementById('tag');
+    tags.disabled = false;
+    tags.innerHTML = '';
+    let option = document.createElement('option');
+    option.innerHTML = 'タグを選択してください';
+    option.defaultSelected = true;
+    option.disabled = true;
+    tags.appendChild(option);
+
+    tagList[selectGenre].forEach( tag => {
+      let option = document.createElement('option');
+      option.innerHTML = tag;
+      option.setAttribute('value', '' + tag + '');
+      tags.appendChild(option);  
+    });    
+  }
+</script>
 </head>
 <body>
   <?php include("../../layout/header.php"); ?>
@@ -69,7 +93,8 @@
         </div>
         <div class="input-area">
           <label for="genre">ジャンル</label>
-          <select name="genre">
+          <select name="genre" onchange="createTag(this.value)">
+            <option disabled selected>ジャンルを選択してください</option>
             <option value="english">英単語</option>
             <option value="word">IT用語</option>
             <option value="syntax">書式・文法・構文</option>
@@ -77,13 +102,16 @@
         </div>
         <div class="input-area">
           <label for="tag">タグ</label>
-          <select name="tag">
+          <select name="tag" id="tag" disabled>
+            <option disabled selected>タグを選択してください</option>
+          </select>
+          <!-- <select name="tag">
             <option value="IT基礎">IT基礎</option>
             <option value="ネットワーク">ネットワーク</option>
             <option value="Java">Java</option>
             <option value="PHP">PHP</option>
             <option value="SQL">SQL</option>
-          </select>
+          </select> -->
         </div>
         <?php
           if($login_user['authority'] == 1) {

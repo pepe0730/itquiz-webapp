@@ -8,9 +8,7 @@
           <select name="tag" id="tag">
           <option value="IT基礎">IT基礎</option>
             <option value="ネットワーク">ネットワーク</option>
-            <option value="フロントエンド">フロントエンド</option>
-            <option value="PHP">PHP</option>
-            <option value="Java">Java</option>
+            <option value="プログラミング言語">プログラミング言語</option>
           </select>
         </div>
         <div class="select-area">

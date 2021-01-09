@@ -76,8 +76,6 @@
                             ];
     let buttonLength = $button.length;
     let i = 0;
-
-
     $button[0].addEventListener('click', () => {
       if (correct === button_text[0]) {
           $('#correct-answer').fadeIn();
