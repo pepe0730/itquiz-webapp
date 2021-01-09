@@ -105,13 +105,6 @@
           <select name="tag" id="tag" disabled>
             <option disabled selected>タグを選択してください</option>
           </select>
-          <!-- <select name="tag">
-            <option value="IT基礎">IT基礎</option>
-            <option value="ネットワーク">ネットワーク</option>
-            <option value="Java">Java</option>
-            <option value="PHP">PHP</option>
-            <option value="SQL">SQL</option>
-          </select> -->
         </div>
         <?php
           if($login_user['authority'] == 1) {
