@@ -19,7 +19,7 @@
   if($correct == null) {
     $validation[] = "答えを入力してください";
   }
-  if($correct != $choices_1 && $correct != $choices2 && $correct != $choices_3 && $correct != $choices_4) {
+  if($correct != $choices_1 && $correct != $choices_2 && $correct != $choices_3 && $correct != $choices_4) {
     $validation[] = "答えが選択肢のなかにありません";
   }
 
