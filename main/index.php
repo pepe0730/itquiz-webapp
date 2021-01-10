@@ -1,7 +1,7 @@
 <?php
   include("../filter/loginCheckFilter.php");
   include("../filter/flashCheckFilter.php");
-  unset($_SESSION['quiz_list'], $_SESSION['quiz_index'], $_SESSION['now_quiz'], $_SESSION['correct_count'], $_SESSION['quiz_length']);
+  unset($_SESSION['quiz_list'], $_SESSION['quiz_index'], $_SESSION['now_quiz'], $_SESSION['correct_count'], $_SESSION['quiz_length'], $_SESSION['id']);
 ?>
 <!DOCTYPE html>
 <html lang="ja">

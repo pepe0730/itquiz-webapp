@@ -2,7 +2,6 @@
   include("../../filter/loginCheckFilter.php");
   $correct_count = $_SESSION['correct_count'];
   $quiz_length = $_SESSION['quiz_length'];
-  unset($_SESSION['correct_count'], $_SESSION['quiz_length']);
 ?>
 
 <!DOCTYPE html>

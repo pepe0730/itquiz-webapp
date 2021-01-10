@@ -33,9 +33,6 @@
   <link rel="stylesheet" href="../../css/style.css">
   <!-- fontfamily -->
   <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300" rel="stylesheet">
-  <!-- jQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script src="../js/modal.js"></script>
   <!-- font awesome -->
   <script src="https://kit.fontawesome.com/b24292ab52.js" crossorigin="anonymous"></script>
 </head>

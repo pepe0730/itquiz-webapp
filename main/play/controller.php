@@ -7,12 +7,10 @@
     $flag = $_POST['flag'];
     $user_id = $login_user['id'];
     $genre = $_POST['genre'];
-    if ($flag == 2) {
-      $sql = "select * from quiz_list where user_id=".$user_id." and genre='".$genre."' and tag='".$tag."' order by rand() limit ".$number."";
-      //var_dump($sql);
+    if ($flag == 1) {
+      $sql = "select * from quiz_list where genre='".$genre."' and tag='".$tag."' and disclosure_flag = ".$flag." order by rand() limit ".$number."";
     } else {
       $sql = "select * from quiz_list where user_id =".$user_id." and genre='".$genre."' and tag='".$tag."' and disclosure_flag = ".$flag." order by rand() limit ".$number."";
-      //var_dump($sql);
     }
     //DB呼び出し クエリ実行
     include('../../connect/connect.php');

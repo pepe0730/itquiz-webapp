@@ -68,31 +68,31 @@
       <form class="form-wrapper" action="create.php" method="post">
         <h2>問題作成</h2>
         <div class="input-area">
-          <label for="question">問題文</label>
+        <p class="text-left label-content"><label for="question">問題文</label></p>
           <textarea name="question" cols="30" rows="10"></textarea>
         </div>
         <div class="input-area">
-          <label for="choices_1">選択肢1</label>
+        <p class="text-left label-content"><label for="choices_1">選択肢1</label></p>
           <input type="text" name="choices_1">
         </div>
         <div class="input-area">
-          <label for="choices_2">選択肢2</label>
+        <p class="text-left label-content"><label for="choices_2">選択肢2</label></p>
           <input type="text" name="choices_2">
         </div>
         <div class="input-area">
-          <label for="choices_3">選択肢3</label>
+        <p class="text-left label-content"><label for="choices_3">選択肢3</label></p>
           <input type="text" name="choices_3">
         </div>
         <div class="input-area">
-          <label for="choices_4">選択肢4</label>
+          <p class="text-left label-content"><label for="choices_4">選択肢4</label></p>
           <input type="text" name="choices_4">
         </div>
         <div class="input-area">
-          <label for="correct">答え</label>
+          <p class="text-left label-content"><label for="correct">答え</label></p>
           <input type="text" name="correct" placeholder="答えの選択肢をここにコピペ">
         </div>
         <div class="input-area">
-          <label for="genre">ジャンル</label>
+        <p class="text-left label-content"><label for="genre">ジャンル</label></p>
           <select name="genre" onchange="createTag(this.value)">
             <option disabled selected>ジャンルを選択してください</option>
             <option value="english">英単語</option>
@@ -101,7 +101,7 @@
           </select>
         </div>
         <div class="input-area">
-          <label for="tag">タグ</label>
+        <p class="text-left label-content"><label for="tag">タグ</label></p>
           <select name="tag" id="tag" disabled>
             <option disabled selected>タグを選択してください</option>
           </select>
@@ -110,7 +110,7 @@
           if($login_user['authority'] == 1) {
             echo <<<EOM
             <div class="input-area">
-              <label for="disclosure_flag">ユーザ権限</label>
+            <p class="text-left label-content"><label for="disclosure_flag">公開範囲</label></p>
               <select name="disclosure_flag">
                 <option value="0">プライベート問題</option>
                 <option value="1">一般公開</option>

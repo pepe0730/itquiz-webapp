@@ -31,19 +31,20 @@
       <form class="form-wrapper" action="new_user_create.php" method="post">
         <h2>ユーザ新規登録</h2>
         <div class="input-area">
-          <label for="code">ユーザーネーム</label>
+        <p class="text-left label-content"><label for="name">ユーザネーム</label></p>
           <input type="text" name="name">
         </div>
         <div class="input-area">
-          <label for="email">メールアドレス</label>
+        <p class="text-left label-content"><label for="email">メールアドレス</label></p>
           <input type="text" name="email" placeholder="重複不可">
         </div>
         <div class="input-area">
-          <label for="password">パスワード</label>
+        <p class="text-left label-content"><label for="password">パスワード</label></p>
           <input type="text" name="password">
         </div>
         <input type="hidden" name="authority" value="0">
-        <button type="submit">新規登録</button>
+        <button class="mb-5" type="submit">新規登録</button>
+        <a href="index.php" style="color:rgba(110, 0, 225, 0.7)">1つ前に戻る</a>
       </form>
     </div>
   </div>

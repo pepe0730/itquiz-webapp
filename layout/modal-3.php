@@ -4,7 +4,7 @@
       <h2>フィルター</h2>
       <form action="play/controller.php" method="post">
         <div class="select-area">
-          <label for="tag">タグを選ぶ</label>
+          <p class="text-left label-content"><label for="tag">タグを選ぶ</label></p>
           <select name="tag" id="tag">
             <option value="HTML">HTML</option>
             <option value="SQL">SQL</option>
@@ -13,7 +13,7 @@
           </select>
         </div>
         <div class="select-area">
-          <label for="number">問題数</label>
+          <p class="text-left label-content"><label for="number">問題数</label></p>
           <select name="number" id="number">
             <option value="10">10</option>
             <option value="20">20</option>
@@ -21,11 +21,10 @@
           </select>
         </div>
         <div class="select-area">
-          <label for="flag">問題の種類</label>
+          <p class="text-left label-content"><label for="email">問題の種類</label></p>
           <select name="flag" id="flag">
             <option value="1">共通問題のみ</option>
             <option value="0">自作問題のみ</option>
-            <option value="2">全て含む</option>
           </select>
         </div>
         <input type="hidden" name="genre" value="syntax">

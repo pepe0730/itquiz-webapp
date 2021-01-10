@@ -22,9 +22,9 @@
 <body>
   <?php include("../../layout/header.php"); ?>
   <div class="container">
-    <div class="mt-5 mb-3 p-5 question_area">
+    <div class="mt-5 mb-3 question_area">
       <div class="mb-5 question">
-        <h5 class="mb-3 text-success text-left"><i class="fas fa-check-square"></i> Question</h5>
+        <h5 class="mb-5 text-success text-left"><i class="fas fa-check-square"></i> Question</h5>
         <p><?php echo $_SESSION['now_quiz']['question'] ?></p>
       </div>
       <div clss="answers">
@@ -35,11 +35,11 @@
       </div>
       
     </div>
-    <div class="d-flex button-wrapper">
-      <button type="button">①</button>
-      <button type="button">②</button>
-      <button type="button">③</button>
-      <button type="button">④</button>
+    <div class="d-flex flex-wrap button-wrapper">
+      <button type="button" class="quiz_button">①</button>
+      <button type="button" class="quiz_button">②</button>
+      <button type="button" class="quiz_button">③</button>
+      <button type="button" class="quiz_button">④</button>
     </div>
   </div>
   <div class="modal-wrapper" id="correct-answer">

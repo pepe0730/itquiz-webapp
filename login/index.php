@@ -1,9 +1,6 @@
 <?php
   session_start();
-  unset($_SESSION["login_user"]);
-  unset($_SESSION['quiz_list']);
-  unset($_SESSION['quiz_index']);
-  unset($_SESSION['now_quiz']); 
+  unset($_SESSION["login_user"], $_SESSION['quiz_list'], $_SESSION['quiz_index'], $_SESSION['now_quiz'], $_SESSION['correct_count'], $_SESSION['quiz_length'], $_SESSION['id']);
   include("../filter/flashCheckFilter.php");
 ?>
 <!DOCTYPE html>
@@ -44,11 +41,11 @@
       <form class="form-wrapper" action="loginController.php" method="post">
         <h2>ログイン</h2>
         <div class="input-area">
-          <label for="email">メールアドレス</label>
+          <p class="text-left label-content"><label for="email">メールアドレス</label></p>
           <input type="text" name="email">
         </div>
         <div class="input-area">
-          <label for="password">パスワード</label>
+          <p class="text-left label-content"><label for="password">パスワード</label></p>
           <input type="text" name="password">
         </div>
         <button type="submit">ログイン</button>
