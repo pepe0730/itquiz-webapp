@@ -25,7 +25,7 @@
   if (!$result) {
     $_SESSION['flash']['message'] = "更新に失敗しました";
     $_SESSION['flash']['type'] = "flash_faile"; 
-    header('Location: new.php');
+    header('Location: edit.php');
   } else {
     $_SESSION['flash']['message'] = "更新に成功しました";
     $_SESSION['flash']['type'] = "flash_success";

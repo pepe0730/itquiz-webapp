@@ -132,6 +132,7 @@
         ?>
         <input type="hidden" name="user_id" value="<?php echo $login_user['id'] ?>">
         <button type="submit">更新</button>
+        <a href="destroy.php" class="destroy-btn">削除する</a>
       </form>
     </div>
   </div>
